@@ -27,10 +27,11 @@ As root user, download the repository:
 git clone https://github.com/OmniDB/plpgsql_debugger
 ```
 
-Install headers for PostgreSQL and libpq (package names might be different depending on your distribution):
+Install tools for compiling, headers for PostgreSQL and libpq (package names might be different depending
+on your distribution):
 
 ```bash
-sudo apt install postgresql-server-dev-X.Y libpq-dev
+sudo apt install build-essential postgresql-server-dev-X.Y libpq-dev
 ```
 
 Compile and install the extension:
