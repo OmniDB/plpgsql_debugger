@@ -1,0 +1,4 @@
+comment = 'PostgreSQL extension for enabling PL/pgSQL debugger in OmniDB'
+default_version = '1.0.0'
+module_pathname = '$libdir/omnidb_plpgsql_debugger'
+relocatable = false

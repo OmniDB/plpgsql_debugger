@@ -1,0 +1,38 @@
+{
+   "name": "omnidb_plpgsql_debugger",
+   "abstract": "PostgreSQL extension for enabling PL/pgSQL debugger in OmniDB",
+   "version": "1.0.0",
+   "maintainer": [
+      "William Ivanski <william.ivanski@2ndquadrant.com>",
+      "Rafael Thofehrn Castro <rafael.castro@2ndquadrant.com"
+   ],
+   "license": "mit",
+   "provides": {
+      "omnidb_plpgsql_debugger": {
+         "abstract": "PostgreSQL extension for enabling PL/pgSQL debugger in OmniDB",
+         "file": "omnidb_plpgsql_debugger--1.0.0.sql",
+         "docfile": "README.md",
+         "version": "1.0.0"
+      }
+   },
+   "resources": {
+      "bugtracker": {
+         "web": "http://github.com/OmniDB/plpgsql_debugger/issues/"
+      },
+      "repository": {
+        "url":  "git://github.com/OmniDB/plpgsql_debugger.git",
+        "web":  "http://github.com/OmniDB/plpgsql_debugger/",
+        "type": "git"
+      }
+   },
+   "generated_by": "William Ivanski",
+   "meta-spec": {
+      "version": "1.0.0",
+      "url": "http://pgxn.org/meta/spec.txt"
+   },
+   "tags": [
+      "plpgsql",
+      "functions",
+      "debugger"
+   ]
+}
