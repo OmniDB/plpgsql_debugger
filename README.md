@@ -8,6 +8,11 @@ software:
 - An extension that can be installed in PostgreSQL;
 - The debugger GUI inside OmniDB application.
 
+More details on how you can use the PL/pgSQL debugger extension together with the OmniDB GUI can be found
+in the documentation:
+
+https://omnidb.readthedocs.io/en/latest/en/13_writing_and_debugging_plpgsql_functions.html
+
 
 # Installation
 
