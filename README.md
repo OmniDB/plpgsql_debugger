@@ -108,6 +108,7 @@ from Debian PGDG repository. First you need to install the PGDG repository (if n
 ```bash
 sudo echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 sudo wget --quiet -O - https://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
+sudo apt update
 ```
 
 Then you install the package for your specific PostgreSQL version like this:
