@@ -36,6 +36,7 @@ sudo apt install postgresql-server-dev-X.Y libpq-dev
 Compile and install the extension:
 
 ```bash
+cd plpgsql_debugger
 make
 sudo make install
 ```
