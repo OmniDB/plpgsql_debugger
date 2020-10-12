@@ -3,7 +3,7 @@
 CREATE SCHEMA omnidb;
 
 CREATE FUNCTION omnidb.omnidb_enable_debugger(character varying)
-RETURNS void AS '$libdir/omnidb_plugin'
+RETURNS void AS '$libdir/omnidb_plpgsql_debugger'
 LANGUAGE C IMMUTABLE STRICT;
 
 CREATE TABLE omnidb.contexts
