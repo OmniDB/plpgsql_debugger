@@ -53,7 +53,7 @@ $CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I /usr/loca
 $CC -fPIC -o omnidb_plpgsql_debugger_13.so omnidb_plpgsql_debugger.o -L /usr/local/pg13/lib -lpq -shared
 
 # Cleaning
-rm -f *.o
+rm -f *.o *.sh deploy/
 
 # Building tarball
 cd ..
