@@ -2,14 +2,14 @@
 
 # Introduction
 
-OmniDB offers a full-featured PL/pgSQL debugger. It is offered in 2 different inter-dependent pieces of
-software:
+OmniDB offers a full-featured PL/pgSQL debugger. It is offered in 2 different
+inter-dependent pieces of software:
 
 - An extension that can be installed in PostgreSQL;
 - The debugger GUI inside OmniDB application.
 
-More details on how you can use the PL/pgSQL debugger extension together with the OmniDB GUI can be found
-in the documentation:
+More details on how you can use the PL/pgSQL debugger extension together with
+the OmniDB GUI can be found in the documentation:
 
 https://omnidb.readthedocs.io/en/latest/en/13_writing_and_debugging_plpgsql_functions.html
 
@@ -18,8 +18,8 @@ https://omnidb.readthedocs.io/en/latest/en/13_writing_and_debugging_plpgsql_func
 
 ## From sources
 
-Starting from OmniDB 3.0, the `omnidb_plpgsql_debugger` is not generally offered in DEB/RPM packages.
-Instead, users are encouraged to compile it against the PostgreSQL version and installation of choice.
+Users are encouraged to compile it against the PostgreSQL version and
+installation of choice.
 
 As root user, download the repository:
 
@@ -27,8 +27,8 @@ As root user, download the repository:
 git clone https://github.com/OmniDB/plpgsql_debugger
 ```
 
-Install tools for compiling, headers for PostgreSQL and libpq (package names might be different depending
-on your distribution):
+Install tools for compiling, headers for PostgreSQL and libpq (package names
+might be different depending on your distribution):
 
 ```bash
 sudo apt install build-essential postgresql-server-dev-X.Y libpq-dev
@@ -42,12 +42,27 @@ make
 sudo make install
 ```
 
+## From packages
+
+We package `omnidb_plpgsql_debugger` as DEB/RPM. This is useful because the extension comes pre-compiled, but it might still be preferable (and even easier) to compile the extension instead.
+
+The package installation puts all files under directory `/opt/omnidb-plpgsql-debugger/`. You should copy files `omnidb_plpgsql_debugger_XX.so`, `omnidb_plpgsql_debugger--1.0.0.sql` and `omnidb_plpgsql_debugger.control` to the corresponding directories so PostgreSQL can recognize `omnidb_plpgpsql_debugger` as an installable extension.
+
+Such folders can vary depending on your distribution, PostgreSQL version and PostgreSQL installation method. For example, on Debian 10, using PostgreSQL 12 installed from official community packages, file `omnidb_plpgsql_debugger_12.so` should go to directory `/usr/lib/postgresql/12/lib` (the file should be renamed as `omnidb_plpgsql_debugger.so`) and files `omnidb_plpgsql_debugger--1.0.0.sql` and `omnidb_plpgsql_debugger.control` should go to directory `/usr/share/postgresql/12/extension`.
+
+
+## Post-installation
+
 Add `omnidb_plpgsql_debugger` to `shared_preload_libraries`:
 
 ```bash
 nano /path/to/postgresql.conf
     shared_preload_libraries = 'omnidb_plpgsql_debugger'
+```
 
+Restart PostgreSQL:
+
+```
 sudo systemctl restart postgresql
 ```
 
