@@ -13,52 +13,44 @@ cd omnidb-plpgsql-debugger_$VERSION/
 rm -f *.o *.so
 
 # Compiling for PostgreSQL 9.3
-PREFIX="/usr/local/pg93"
 rm -f *.o
-$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I $PREFIX/include -I $PREFIX/include/postgresql -I $PREFIX/include/postgresql/server
-$CC -fPIC -o omnidb_plpgsql_debugger_93.so omnidb_plpgsql_debugger.o -L $PREFIX/lib -lpq -shared
+$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I /usr/local/pg93/include -I /usr/local/pg93/include/postgresql -I /usr/local/pg93/include/postgresql/server
+$CC -fPIC -o omnidb_plpgsql_debugger_93.so omnidb_plpgsql_debugger.o -L /usr/local/pg93/lib -lpq -shared
 
 # Compiling for PostgreSQL 9.4
-PREFIX="/usr/local/pg94"
 rm -f *.o
-$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I $PREFIX/include -I $PREFIX/include/postgresql -I $PREFIX/include/postgresql/server
-$CC -fPIC -o omnidb_plpgsql_debugger_94.so omnidb_plpgsql_debugger.o -L $PREFIX/lib -lpq -shared
+$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I /usr/local/pg94/include -I /usr/local/pg94/include/postgresql -I /usr/local/pg94/include/postgresql/server
+$CC -fPIC -o omnidb_plpgsql_debugger_94.so omnidb_plpgsql_debugger.o -L /usr/local/pg94/lib -lpq -shared
 
 # Compiling for PostgreSQL 9.5
-PREFIX="/usr/local/pg95"
 rm -f *.o
-$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I $PREFIX/include -I $PREFIX/include/postgresql -I $PREFIX/include/postgresql/server
-$CC -fPIC -o omnidb_plpgsql_debugger_95.so omnidb_plpgsql_debugger.o -L $PREFIX/lib -lpq -shared
+$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I /usr/local/pg95/include -I /usr/local/pg95/include/postgresql -I /usr/local/pg95/include/postgresql/server
+$CC -fPIC -o omnidb_plpgsql_debugger_95.so omnidb_plpgsql_debugger.o -L /usr/local/pg95/lib -lpq -shared
 
 # Compiling for PostgreSQL 9.6
-PREFIX="/usr/local/pg96"
 rm -f *.o
-$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I $PREFIX/include -I $PREFIX/include/postgresql -I $PREFIX/include/postgresql/server
-$CC -fPIC -o omnidb_plpgsql_debugger_96.so omnidb_plpgsql_debugger.o -L $PREFIX/lib -lpq -shared
+$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I /usr/local/pg96/include -I /usr/local/pg96/include/postgresql -I /usr/local/pg96/include/postgresql/server
+$CC -fPIC -o omnidb_plpgsql_debugger_96.so omnidb_plpgsql_debugger.o -L /usr/local/pg96/lib -lpq -shared
 
 # Compiling for PostgreSQL 10
-PREFIX="/usr/local/pg10"
 rm -f *.o
-$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I $PREFIX/include -I $PREFIX/include/postgresql -I $PREFIX/include/postgresql/server
-$CC -fPIC -o omnidb_plpgsql_debugger_10.so omnidb_plpgsql_debugger.o -L $PREFIX/lib -lpq -shared
+$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I /usr/local/pg10/include -I /usr/local/pg10/include/postgresql -I /usr/local/pg10/include/postgresql/server
+$CC -fPIC -o omnidb_plpgsql_debugger_10.so omnidb_plpgsql_debugger.o -L /usr/local/pg10/lib -lpq -shared
 
 # Compiling for PostgreSQL 11
-PREFIX="/usr/local/pg11"
 rm -f *.o
-$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I $PREFIX/include -I $PREFIX/include/postgresql -I $PREFIX/include/postgresql/server
-$CC -fPIC -o omnidb_plpgsql_debugger_11.so omnidb_plpgsql_debugger.o -L $PREFIX/lib -lpq -shared
+$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I /usr/local/pg11/include -I /usr/local/pg11/include/postgresql -I /usr/local/pg11/include/postgresql/server
+$CC -fPIC -o omnidb_plpgsql_debugger_11.so omnidb_plpgsql_debugger.o -L /usr/local/pg11/lib -lpq -shared
 
 # Compiling for PostgreSQL 12
-PREFIX="/usr/local/pg12"
 rm -f *.o
-$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I $PREFIX/include -I $PREFIX/include/postgresql -I $PREFIX/include/postgresql/server
-$CC -fPIC -o omnidb_plpgsql_debugger_12.so omnidb_plpgsql_debugger.o -L $PREFIX/lib -lpq -shared
+$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I /usr/local/pg12/include -I /usr/local/pg12/include/postgresql -I /usr/local/pg12/include/postgresql/server
+$CC -fPIC -o omnidb_plpgsql_debugger_12.so omnidb_plpgsql_debugger.o -L /usr/local/pg12/lib -lpq -shared
 
 # Compiling for PostgreSQL 13
-PREFIX="/usr/local/pg13"
 rm -f *.o
-$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I $PREFIX/include -I $PREFIX/include/postgresql -I $PREFIX/include/postgresql/server
-$CC -fPIC -o omnidb_plpgsql_debugger_93.so omnidb_plpgsql_debugger.o -L $PREFIX/lib -lpq -shared
+$CC -fPIC -c -o omnidb_plpgsql_debugger.o omnidb_plpgsql_debugger.c -I /usr/local/pg13/include -I /usr/local/pg13/include/postgresql -I /usr/local/pg13/include/postgresql/server
+$CC -fPIC -o omnidb_plpgsql_debugger_13.so omnidb_plpgsql_debugger.o -L /usr/local/pg13/lib -lpq -shared
 
 # Cleaning
 rm -f *.o
